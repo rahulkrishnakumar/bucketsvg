@@ -7,7 +7,7 @@
     "Icons",
     "SVG"
   ],
-  "module": "dist/index.esm.js",
+  "module": "dist/index.d.ts",
   "files": [
     "dist"
   ],
