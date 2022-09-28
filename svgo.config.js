@@ -16,5 +16,15 @@ module.exports = {
       },
     },
     { name: 'removeDimensions' },
+    { name: 'sortAttrs' },
+    // {
+    //   name: 'removeAttributesToSVGElement',
+    //   params: {
+    //     attributes: {
+    //       fill: 'currentColor',
+    //       ariaHidden: true,
+    //     },
+    //   },
+    // },
   ],
 };

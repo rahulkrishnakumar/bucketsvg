@@ -1,10 +1,13 @@
 import { babel } from '@rollup/plugin-babel';
 import filesize from 'rollup-plugin-filesize';
+import typescript from '@rollup/plugin-typescript';
 const config = {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: {
-    file: 'dist/index.esm.js',
+    dir: 'dist',
     format: 'esm',
+    preserveModules: true,
+    sourcemap: true,
   },
   external: [/@babel\/runtime/, 'react'],
   plugins: [
@@ -13,6 +16,11 @@ const config = {
       plugins: ['@babel/plugin-transform-runtime'],
     }),
     filesize(),
+    typescript({
+      tsconfig: './tsconfig.build.json',
+      declaration: true,
+      declarationDir: 'dist',
+    }),
   ],
 };
 export default config;
