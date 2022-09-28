@@ -1,6 +1,6 @@
 {
   "name": "bucketsvg",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "BucketSVG a free svg icon library",
   "keywords": [
     "React",
@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "main": "index.js",
+  "main": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run svgo && npm run svgr && rollup -c",
