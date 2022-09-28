@@ -14,11 +14,12 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf src && rimraf dist",
-    "build": "npm run svgr && rollup -c",
-    "svgr": "svgr --icon --title-prop --replace-attr-values '#1D1D1D=currentColor' -d src -- assets"
+    "build": "npm run svgo && npm run svgr && rollup -c",
+    "svgr": "svgr -d src optimized --svgo-config svgo.config.js --title-prop",
+    "svgo": "rimraf ./optimized && svgo -f ./assets -o ./optimized --pretty --indent=2"
   },
   "author": "Rahul Krishnakumar",
-  "repository": "",
+  "repository": "https://github.com/rahulkrishnakumar/bucketsvg",
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.1",
@@ -28,7 +29,8 @@
     "@svgr/cli": "^6.3.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
-    "rollup-plugin-filesize": "^9.1.2"
+    "rollup-plugin-filesize": "^9.1.2",
+    "svgo": "^2.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0"
