@@ -1,7 +1,7 @@
 {
   "name": "bucketsvg",
-  "version": "1.1.0",
-  "description": "BucketSVG a free SVG icon library",
+  "version": "1.1.1",
+  "description": "BucketSVG is an opensource designer made SVG icon library available in Figma, React, PNG and SVG",
   "keywords": [
     "React",
     "Icons",
