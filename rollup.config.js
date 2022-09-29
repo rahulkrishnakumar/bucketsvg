@@ -6,8 +6,6 @@ const config = {
   output: {
     dir: 'dist',
     format: 'esm',
-    preserveModules: true,
-    sourcemap: true,
   },
   external: [/@babel\/runtime/, 'react'],
   plugins: [
