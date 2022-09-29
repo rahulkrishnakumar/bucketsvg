@@ -1,0 +1,12 @@
+export { default as FacebookOutline } from "./Facebook";
+export { default as GoogleOutline } from "./Google";
+export { default as InstagramOutline } from "./Instagram";
+export { default as MinusNormalOutline } from "./MinusNormal";
+export { default as MinusRingNormalOutline } from "./MinusRingNormal";
+export { default as MinusRingOutline } from "./MinusRing";
+export { default as MinusOutline } from "./Minus";
+export { default as PlusNormalOutline } from "./PlusNormal";
+export { default as PlusRingNormalOutline } from "./PlusRingNormal";
+export { default as PlusRingOutline } from "./PlusRing";
+export { default as PlusOutline } from "./Plus";
+export { default as TwitterOutline } from "./Twitter";

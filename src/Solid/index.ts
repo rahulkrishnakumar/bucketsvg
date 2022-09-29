@@ -1,0 +1,12 @@
+export { default as FacebookSolid } from "./Facebook";
+export { default as GoogleSolid } from "./Google";
+export { default as InstagramSolid } from "./Instagram";
+export { default as MinusNormalSolid } from "./MinusNormal";
+export { default as MinusRingNormalSolid } from "./MinusRingNormal";
+export { default as MinusRingSolid } from "./MinusRing";
+export { default as MinusSolid } from "./Minus";
+export { default as PlusNormalSolid } from "./PlusNormal";
+export { default as PlusRingNormalSolid } from "./PlusRingNormal";
+export { default as PlusRingSolid } from "./PlusRing";
+export { default as PlusSolid } from "./Plus";
+export { default as TwitterSolid } from "./Twitter";

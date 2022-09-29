@@ -1,0 +1,12 @@
+export { default as FacebookCircle } from "./Facebook";
+export { default as GoogleCircle } from "./Google";
+export { default as InstagramCircle } from "./Instagram";
+export { default as MinusNormalCircle } from "./MinusNormal";
+export { default as MinusRingNormalCircle } from "./MinusRingNormal";
+export { default as MinusRingCircle } from "./MinusRing";
+export { default as MinusCircle } from "./Minus";
+export { default as PlusNormalCircle } from "./PlusNormal";
+export { default as PlusRingNormalCircle } from "./PlusRingNormal";
+export { default as PlusRingCircle } from "./PlusRing";
+export { default as PlusCircle } from "./Plus";
+export { default as TwitterCircle } from "./Twitter";

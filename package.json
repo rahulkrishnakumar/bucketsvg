@@ -1,24 +1,31 @@
 {
   "name": "bucketsvg",
-  "version": "1.0.11",
-  "description": "BucketSVG a free svg icon library",
+  "version": "1.1.0",
+  "description": "BucketSVG a free SVG icon library",
   "keywords": [
     "React",
     "Icons",
     "SVG"
   ],
-  "main": "dist/src/index.js",
-  "module": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
-    "dist/index.d.ts",
-    "dist/index.ts"
+    "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf src && rimraf dist",
-    "build": "npm run svgo && npm run svgr && rollup -c",
-    "svgr": "svgr -d src optimized --svgo-config svgo.config.js --title-prop --typescript",
-    "svgo": "rimraf ./optimized && svgo -f ./assets -o ./optimized --pretty --indent=2"
+    "prebuild": "rimraf src/Circle && rimraf src/Color && rimraf src/Duo && rimraf src/Outline && rimraf src/Solid && rimraf src/Square && rimraf src/Thin && rimraf dist && rimraf optimized",
+    "build": "npm run prebuild && npm run svgo && npm run svgr && rollup -c",
+    "svgr": "svgr -d src src/assets --svgo-config svgo.config.js",
+    "svgo": "npm run svgo-circle && npm run svgo-color && npm run svgo-duo && npm run svgo-outline && npm run svgo-solid && npm run svgo-square && npm run svgo-thin",
+    "svgo-circle": "svgo -f ./src/assets/Circle -o ./optimized/Circle --pretty --indent=2 ",
+    "svgo-color": "svgo -f ./src/assets/Color -o ./optimized/Color --pretty --indent=2 ",
+    "svgo-duo": "svgo -f ./src/assets/Duo -o ./optimized/Duo --pretty --indent=2 ",
+    "svgo-outline": "svgo -f ./src/assets/Outline -o ./optimized/Outline --pretty --indent=2 ",
+    "svgo-solid": "svgo -f ./src/assets/Solid -o ./optimized/Solid --pretty --indent=2 ",
+    "svgo-square": "svgo -f ./src/assets/Square -o ./optimized/Square --pretty --indent=2 ",
+    "svgo-thin": "svgo -f ./src/assets/Thin -o ./optimized/Thin --pretty --indent=2 "
   },
   "author": {
     "name": "Rahul Krishnakumar",
@@ -27,23 +34,25 @@
   },
   "repository": "https://github.com/rahulkrishnakumar/bucketsvg",
   "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.19.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-env": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-typescript": "^8.5.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@svgr/cli": "^6.3.1",
     "@types/react": "^18.0.21",
-    "react": "^18.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.0",
     "svgo": "^2.8.0",
-    "tslib": "^2.4.0",
     "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.19.0"
   }
 }

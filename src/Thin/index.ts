@@ -1,0 +1,12 @@
+export { default as FacebookThin } from "./Facebook";
+export { default as GoogleThin } from "./Google";
+export { default as InstagramThin } from "./Instagram";
+export { default as MinusNormalThin } from "./MinusNormal";
+export { default as MinusRingNormalThin } from "./MinusRingNormal";
+export { default as MinusRingThin } from "./MinusRing";
+export { default as MinusThin } from "./Minus";
+export { default as PlusNormalThin } from "./PlusNormal";
+export { default as PlusRingNormalThin } from "./PlusRingNormal";
+export { default as PlusRingThin } from "./PlusRing";
+export { default as PlusThin } from "./Plus";
+export { default as TwitterThin } from "./Twitter";
